@@ -1,58 +1,214 @@
-{% extends "base.html" %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bi2i Sports Week 2020</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" type="text/css" href="./styles.css" />
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+		<!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 
-{% block content %}
+    <!-- Compiled and minified JavaScript -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="{% static 'lang-logo.png'%}">
-    </a>
-    <h1>Getting Started with Python on Heroku</h1>
-    <p>This is a sample Python application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-python"><span class="glyphicon glyphicon-flash"></span> Getting Started with Python</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/python-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-  </div>
-</div>
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-python" class="alert-link">Getting Started with Python on Heroku</a> tutorial.
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-      <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/python-getting-started">Heroku Button</a> on the repository.</li>
 
-        <li>When Heroku received the source code, it fetched all the dependencies in the <a href="https://github.com/heroku/python-getting-started/blob/master/Pipfile">Pipfile</a>, creating a deployable slug.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
-      <ul>
-        <li>If you are following the <a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started</a> guide, then please head back to the tutorial and follow the next steps!</li>
-        <li>If you deployed this app by deploying the Heroku Button, then in a command line shell, run:</li>
-        <ul>
-          <li><code>git clone https://github.com/heroku/python-getting-started.git</code> - this will create a local copy of the source code for the app</li>
-          <li><code>cd python-getting-started</code> - change directory into the local source code repository</li>
-          <li><code>heroku git:remote -a &lt;your-app-name></code> - associate the Heroku app with the repository</li>
-          <li>You'll now be set up to run the app locally, or <a href="https://devcenter.heroku.com/articles/getting-started-with-python#push-local-changes">deploy changes</a> to Heroku</li>
-        </ul>
-      </ul>
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started with Python on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/django-app-configuration">Configuring Django Apps for Heroku</a></li>
-      </ul>
-    </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
-  </div>
-</div>
-{% endblock %}
+	</head>
+	<body>
+		<!-- <img id='back_img' src="./background.jpg"> -->
+		<div class="container-fluid" id='main_div'>
+
+			<div class="row" id='content_row'>
+
+				<div class="col-sm-4" id='PIC_DIV'>
+					<div id='gallery_div'>
+							<!-- <div id='gallery_title_div' style="text-align: center;">
+								<span id='gallery_title' style="margin-top: 10px;">Gallery</span>
+							</div> -->
+
+					<div id='picture_div'>
+						<img id='picture' src="./img1.jpg" alt="Cinque Terre">
+					</div>
+					</div>
+				</div>
+
+					<div class="col-sm-8" id='CONT_DIV'>
+						<div id='content_div'>
+
+							<div id='bulletin_div' style="text-align: center; background-color: #373737;">
+							  <span id='bulletin_title' style="font-size: 40px; color: black; font-weight: bold;"><span style="color: #30BAB2;">Sports</span> <span style="color: #98C93C;">Week</span> <span style="color: #379344;">2020</span></span>
+							</div>
+
+
+							<!-- <div id='bulletin_div' style="text-align: center;">
+								<span id='bulletin_title' style="margin-top: 5px; font-size: 40px; ">Sports Week 2020</span>
+							</div> -->
+							<div class='row' id='news_div'>
+
+									<div class="col-sm-3" id='past_div'>
+										<div id='past'>
+											<div class='row' id='past_teams'>
+											  <div class="col-sm-5" id='past_team1_div'>
+											    <img id='past_team1_logo' src="titan.svg" alt="" / style="height: 100px; width: 100px" >
+											  </div>
+											  <div class="col-sm-2" id='vs_past_div'>
+											    <span id='past_vs_content'>vs</span>
+											  </div>
+											  <div class="col-sm-5" id='past_team2_div'>
+											    <img id='past_team2_logo' src="groot.svg" alt="" / style="height: 100px; width: 100px" >
+											  </div>
+											</div>
+
+											<div class='row' id='past_venue'>
+												<div class="col-sm-6" id='past_team1_score_div'>
+													<span id='past_team1_score_content'>Time</span>
+												</div>
+												<div class="col-sm-6" id='past_team2_score_div'>
+													<span id='past_team2_score_content'>Venue</span>
+												</div>
+											</div>
+
+
+											<div class='row' id='past_sport'>
+											  <div class="col-sm-12" id='past_sport_div'>
+											    <span id='past_sport_content'>Sport</span>
+											  </div>
+											</div>
+											<div class='row' id='past_event'>
+											  <div class="col-sm-12" id='past_event_div'>
+											    <span id='past_event_content'>Event</span>
+											  </div>
+											</div>
+											<div class='row' id='past_stage'>
+											  <div class="col-sm-12" id='past_stage_div'>
+											    <span id='past_stage_content'>Stage</span>
+											  </div>
+											</div>
+
+										</div>
+									</div>
+
+									<div class="col-sm-6" id='present_div'>
+										<div id='present'>
+											<div class='row' id='present_teams'>
+												<div class="col-sm-5" id='present_team1_div'>
+													<img id='present_team1_logo' src="titan.svg" alt="" / style="height: 200px; width: 200px" >
+												</div>
+												<div class="col-sm-2" id='vs_present_div'>
+													<span id='present_vs_content'>vs</span>
+												</div>
+												<div class="col-sm-5" id='present_team2_div'>
+													<img id='present_team2_logo' src="groot.svg" alt="" / style="height: 200px; width: 200px" >
+												</div>
+											</div>
+
+											<div class='row' id='present_sport'>
+												<div class="col-sm-12" id='present_sport_div'>
+													<span id='present_sport_content'>Sport</span>
+												</div>
+											</div>
+											<div class='row' id='present_event'>
+												<div class="col-sm-12" id='present_event_div'>
+													<span id='present_event_content'>Event</span>
+												</div>
+											</div>
+											<div class='row' id='present_stage'>
+												<div class="col-sm-12" id='present_stage_div'>
+													<span id='present_stage_content'>Stage</span>
+												</div>
+											</div>
+
+											<div class='row' id='present_venue'>
+												<div class="col-sm-6" id='present_time_div'>
+													<span id='present_time_content'>Time</span>
+												</div>
+												<div class="col-sm-6" id='present_venue_div'>
+													<span id='present_venue_content'>Venue</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+									<div class="col-sm-3" id='future_div'>
+										<div id='future'>
+										  <div class='row' id='future_teams'>
+										    <div class="col-sm-5" id='future_team1_div'>
+										      <img id='future_team1_logo' src="titan.svg" alt="" / style="height: 100px; width: 100px" >
+										    </div>
+										    <div class="col-sm-2" id='vs_future_div'>
+										      <span id='future_vs_content'>vs</span>
+										    </div>
+										    <div class="col-sm-5" id='future_team2_div'>
+										      <img id='future_team2_logo' src="groot.svg" alt="" / style="height: 100px; width: 100px" >
+										    </div>
+										  </div>
+
+										  <div class='row' id='future_venue'>
+										    <div class="col-sm-6" id='future_team1_score_div'>
+										      <span id='future_team1_score_content'>Time</span>
+										    </div>
+										    <div class="col-sm-6" id='future_team2_score_div'>
+										      <span id='future_team2_score_content'>Venue</span>
+										    </div>
+										  </div>
+
+
+										  <div class='row' id='future_sport'>
+										    <div class="col-sm-12" id='future_sport_div'>
+										      <span id='future_sport_content'>Sport</span>
+										    </div>
+										  </div>
+										  <div class='row' id='future_event'>
+										    <div class="col-sm-12" id='future_event_div'>
+										      <span id='future_event_content'>Event</span>
+										    </div>
+										  </div>
+										  <div class='row' id='future_stage'>
+										    <div class="col-sm-12" id='future_stage_div'>
+										      <span id='future_stage_content'>Stage</span>
+										    </div>
+										  </div>
+
+										</div>
+									</div>
+							</div>
+
+
+								<!-- <ul>
+								  <li id='news1'>Coffee</li>
+								  <li id='news2'>Tea</li>
+								  <li id='news3'>Milk</li>
+									<li id='news4'>Coffee</li>
+									<li id='news5'>Coffee</li>
+								</ul>
+							</div> -->
+
+							<div id='trend_title_div' style="text-align: center;">
+								<span id='trend_title'>Is your team leading?</span>
+							</div>
+
+							<div id='trend_chart'></div>
+
+						</div>
+					</div>
+		</div>
+
+		<div class="row" id='bi2i_logo_row'>
+			<div class="col-sm-12" id='bi2i_logo_div'>
+			</div>
+		</div>
+
+
+<script type='text/javascript' src='./app.js'></script>
+<script type='text/javascript' src='./trend_chart.js'></script>
+<script type='text/javascript' src='./bulletin.js'></script>
+<script type='text/javascript' src='./bi2i_logo.js'></script>
+<script type='text/javascript' src='./daily_circle.js'></script>
+<script type='text/javascript' src='./func.js'></script>
+</html>
